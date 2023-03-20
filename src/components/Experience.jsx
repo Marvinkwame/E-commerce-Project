@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import GppGoodIcon from "@mui/icons-material/GppGood";
 import { GppGood, LocalShipping, NewReleases, SentimentSatisfiedAlt } from "@mui/icons-material";
+import { mobile } from "../responsive";
 
 const Experience = () => {
   return (
@@ -69,6 +70,7 @@ const Title = styled.h3`
     font-weight: 600;
     font-size: 2rem;
     width: 500px;
+    ${mobile({ width: "300px", fontSize: "1.2rem" })}
 `
 
 const Section = styled.div`
@@ -77,11 +79,13 @@ const Section = styled.div`
   justify-content: space-between;
   margin-top: 2rem;
   gap: 1rem;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const Box = styled.div`
   display: grid;
   row-gap: 9rem;
+  ${mobile({ textAlign: "center" })}
 `;
 const Cover = styled.div`
   background-color: #c0c0c0;

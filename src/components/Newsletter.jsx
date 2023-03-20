@@ -1,6 +1,7 @@
 import { EmailOutlined, Mail } from "@mui/icons-material";
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Newsletter = () => {
   return (
@@ -34,17 +35,20 @@ const Container = styled.div`
 const Title = styled.h1`
   font-size: 30px;
   margin-bottom: 20px;
+  ${mobile({ fontSize: "1.3rem", textAlign: "center" })}
 `;
 
 const Desc = styled.div`
   font-size: 24px;
   font-weight: 300;
   margin-bottom: 20px;
+  ${mobile({ fontSize: "1rem", textAlign: "center" })}
 `;
 
 const InputContainer = styled.div`
   display: flex;
   gap: 1rem;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const Form = styled.form`

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import FlareIcon from "@mui/icons-material/Flare";
+import { mobile } from "../responsive";
 
 const Detail = () => {
   return (
@@ -19,6 +20,7 @@ const Detail = () => {
 
 const Content = styled.div`
   padding: 80px 20px;
+  ${mobile({  })}
 `
 
 const Box = styled.div`
@@ -30,6 +32,7 @@ const Box = styled.div`
 const Heading = styled.h2`
   text-align: center;
   margin-bottom: 2rem;
+  font-size: 2rem;
 `;
 
 const Text = styled.p`
