@@ -6,7 +6,7 @@ import {
 import React from "react";
 import styled from "styled-components";
 import { sliderItems } from "../data";
-import { mobile } from "../responsive";
+import { mobile, tablet } from "../responsive";
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = React.useState(0);
@@ -54,6 +54,7 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   ${mobile({ display: "none"})};
+  ${tablet({ display: "none" })}
 `;
 
 const Arrow = styled.div`

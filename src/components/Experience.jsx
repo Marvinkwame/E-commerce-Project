@@ -1,8 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import GppGoodIcon from "@mui/icons-material/GppGood";
-import { GppGood, LocalShipping, NewReleases, SentimentSatisfiedAlt } from "@mui/icons-material";
-import { mobile } from "../responsive";
+import {
+  GppGood,
+  LocalShipping,
+  NewReleases,
+  SentimentSatisfiedAlt,
+} from "@mui/icons-material";
+import { mobile, tablet } from "../responsive";
 
 const Experience = () => {
   return (
@@ -28,9 +33,7 @@ const Experience = () => {
               <SentimentSatisfiedAlt />
             </Cover>
             <Heading>Satisfication Guarantee</Heading>
-            <p>
-            Exchange the product you've purchased if it doesn't fit you
-            </p>
+            <p>Exchange the product you've purchased if it doesn't fit you</p>
           </div>
         </Box>
 
@@ -40,9 +43,7 @@ const Experience = () => {
               <NewReleases />
             </Cover>
             <Heading>New Arrival Everyday</Heading>
-            <p>
-                We update our collections almost everyday
-            </p>
+            <p>We update our collections almost everyday</p>
           </div>
         </Box>
 
@@ -52,9 +53,7 @@ const Experience = () => {
               <LocalShipping />
             </Cover>
             <Heading>Free & Fast Delivery</Heading>
-            <p>
-                We offer fast and free delivery for our customers
-            </p>
+            <p>We offer fast and free delivery for our customers</p>
           </div>
         </Box>
       </Section>
@@ -67,37 +66,44 @@ const Container = styled.div`
 `;
 
 const Title = styled.h3`
-    font-weight: 600;
-    font-size: 2rem;
-    width: 500px;
-    ${mobile({ width: "300px", fontSize: "1.2rem" })}
-`
+  font-weight: 600;
+  font-size: 2rem;
+  width: 500px;
+  ${mobile({ width: "300px", fontSize: "1.2rem" })}
+`;
 
 const Section = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin-top: 2rem;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  ${mobile({ flexDirection: "column" })}
+  ${mobile({ gridTemplateColumns: "1fr" })};
+  
 `;
 
 const Box = styled.div`
-  display: grid;
-  row-gap: 9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 300px;
+  text-align: center;
   ${mobile({ textAlign: "center" })}
+  ${tablet({ placeItems: "center" })}
 `;
+
 const Cover = styled.div`
   background-color: #c0c0c0;
   display: inline-flex;
-  padding: 5px;
-  border-radius: 1rem;
+  padding: 10px;
+  border-radius: 0.5rem;
   margin-bottom: 1.5rem;
 `;
 
 const Heading = styled.h3`
-    font-weight: 600;
-    font-size: 1.5rem;
-`
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+`;
 
 export default Experience;
